@@ -1,0 +1,9 @@
+*/.vagrant
+packer_cache
+output-virtualbox-iso
+*.vdi
+*.box
+.idea
+packerlog.txt
+*.retry
+*.vagrant
