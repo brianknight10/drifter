@@ -1,0 +1,6 @@
+---
+- name: Install npm
+  npm:
+    name: npm
+    global: yes
+    state: latest
