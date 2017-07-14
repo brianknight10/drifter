@@ -1,0 +1,8 @@
+---
+- name: Download Docker Compose
+  raw: curl -L https://github.com/docker/compose/releases/download/{{ compose.version }}/docker-compose-`uname -s`-`uname -m` > {{ compose.path }}/docker-compose
+
+- name: Allow Docker Compose to execute
+  file:
+    path: "{{ compose.path }}/docker-compose"
+    mode: 0775

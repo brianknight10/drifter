@@ -1,0 +1,28 @@
+---
+- name: Make sure apt-transport-https is installed
+  apt:
+    pkg: apt-transport-https
+    state: installed
+
+- name: Add Docker repository key
+  apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+    id: 9DC858229FC7DD38854AE2D88D81803C0EBFCD88
+    state: present
+
+- name: Add Docker repository and update apt cache
+  apt_repository:
+    repo: "deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable"
+    update_cache: yes
+    state: present
+
+- name: Install docker
+  apt:
+    pkg: docker-ce
+    state: installed
+
+- name: Make sure docker is running
+  service:
+    name: docker
+    state: started
+    enabled: yes
