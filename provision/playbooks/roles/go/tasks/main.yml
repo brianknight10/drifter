@@ -1,0 +1,20 @@
+---
+- name: Download Go SDK with check (sha256)
+  get_url:
+    url: https://storage.googleapis.com/golang/go{{ go.version }}.linux-amd64.tar.gz
+    dest: /tmp/go.tar.gz
+    checksum: sha256:1862f4c3d3907e59b04a757cfda0ea7aa9ef39274af99a784f5be843c80c6772
+
+- name: Unpack Go SDK
+  unarchive:
+    src: /tmp/go.tar.gz
+    dest: /usr/local
+    remote_src: True
+
+- name: Add environment variables
+  copy:
+    src: go.sh
+    dest: /etc/profile.d/go.sh
+    owner: root
+    group: root
+    mode: 0755
