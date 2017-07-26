@@ -4,6 +4,7 @@ Packer templates for building minimal Vagrant development boxes
 
 ### Available Development Boxes
 
+- [Consul Host](https://app.vagrantup.com/bknight/boxes/consul-host)
 - [Docker Host](https://app.vagrantup.com/bknight/boxes/docker-host)
 - [Go Host](https://app.vagrantup.com/bknight/boxes/go-host)
 - [Node.js Host](https://app.vagrantup.com/bknight/boxes/nodejs-host)
