@@ -1,0 +1,10 @@
+---
+- name: Install dnsmasq
+  apt:
+    pkg: "{{ item }}"
+    update_cache: yes
+    state: present
+  with_items:
+    - dnsmasq-base
+    - dnsmasq
+    - unzip

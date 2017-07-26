@@ -1,0 +1,20 @@
+---
+- name: Download Consul
+  get_url:
+    url: https://releases.hashicorp.com/consul/{{ consul.version }}/consul_{{ consul.version }}_linux_amd64.zip
+    dest: /tmp/consul.zip
+
+- name: Install Consul
+  unarchive:
+    src: /tmp/consul.zip
+    dest: "{{ consul.deploy_dir }}"
+    copy: no
+
+- name: Set permissions on Consul
+  file:
+    path: "{{ consul.deploy_dir }}/consul"
+
+- name: Upload dnsmasq configuration
+  copy:
+    src: consul
+    dest: /etc/dnsmasq.d
