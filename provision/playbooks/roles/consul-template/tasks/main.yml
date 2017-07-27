@@ -1,0 +1,15 @@
+---
+- name: Download Consul Template
+  get_url:
+    url: https://releases.hashicorp.com/consul-template/{{ consul_template.version }}/consul-template_{{ consul_template.version }}_linux_amd64.zip
+    dest: /tmp/consul-template.zip
+
+- name: Install Consul Template
+  unarchive:
+    src: /tmp/consul-template.zip
+    dest: "{{ consul_template.deploy_dir }}"
+    copy: no
+
+- name: Set permissions on Consul
+  file:
+    path: "{{ consul_template.deploy_dir }}/consul-template"
