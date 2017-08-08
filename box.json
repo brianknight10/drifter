@@ -13,7 +13,7 @@
     "preseed_path": "preseed.cfg",
     "template": "",
     "vagrant_cloud_user": "",
-    "version": "1.0.{{ timestamp }}"
+    "version": ""
   },
   "builders": [
     {
