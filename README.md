@@ -8,6 +8,7 @@ Packer templates for building minimal Vagrant development boxes
 - [Docker Host](https://app.vagrantup.com/bknight/boxes/docker-host)
 - [Go Host](https://app.vagrantup.com/bknight/boxes/go-host)
 - [Node.js Host](https://app.vagrantup.com/bknight/boxes/nodejs-host)
+- [Ruby Host](https://app.vagrantup.com/bknight/boxes/ruby-host)
 
 ### Building Templates
 

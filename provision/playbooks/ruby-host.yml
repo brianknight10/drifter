@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: true
+  user: vagrant
+  roles:
+    - { role: rvm_io.ruby,
+        rvm1_rubies: ['ruby-2.4.1'],
+        rvm1_user: 'vagrant'
+      }
