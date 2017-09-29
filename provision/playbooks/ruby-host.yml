@@ -2,8 +2,12 @@
 - hosts: all
   become: true
   user: vagrant
+  vars:
+    apt_packages:
+      - g++
   roles:
+    - apt
     - { role: rvm_io.ruby,
-        rvm1_rubies: ['ruby-2.4.1'],
+        rvm1_rubies: ['ruby-2.4.2'],
         rvm1_user: 'vagrant'
       }
