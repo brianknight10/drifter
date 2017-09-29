@@ -108,7 +108,9 @@
         "scripts/virtualbox.sh",
         "scripts/ansible.sh"
       ],
-      "type": "shell"
+      "type": "shell",
+      "expect_disconnect": true,
+      "start_retry_timeout": "5m"
     },
     {
       "type": "ansible-local",
